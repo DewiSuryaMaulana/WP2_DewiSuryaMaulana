@@ -6,6 +6,7 @@
 
 <body>
     <center>
+        <?= validation_errors(); ?>
         <form action="<?= base_url('matakuliah/cetak'); ?>" method="post">
             <table>
                 <tr>
@@ -19,12 +20,12 @@
                 <tr>
                     <th>Nama MTK</th>
                     <td>:</td>
-                    <td> <input type="text" name="nama" id="nama"> </td>
+                    <td> <input type="text" name="nama" id="nama" value="<?= set_value('nama') ?>"> </td>
                 </tr>
                 <tr>
                     <th>Kode MTK</th>
                     <td>:</td>
-                    <td> <input type="text" name="kode" id="kode"> </td>
+                    <td> <input type="text" name="kode" id="kode" value="<?= set_value('kode') ?>"> </td>
                 </tr>
                 <tr>
                     <th>SKS</th>
